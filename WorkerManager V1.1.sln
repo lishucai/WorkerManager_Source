@@ -42,6 +42,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Demo3DViewer", "..\Demo3DVi
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "65406"
+		SlnRelativePath = "..\Demo3DViewer\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
