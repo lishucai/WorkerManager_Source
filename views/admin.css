@@ -1,0 +1,107 @@
+﻿
+#caption {
+    height: 60px;
+    background-color: darkblue;
+    background-image: url("../images/logo中交.png");
+    background-repeat: no-repeat;
+    background-size: 55px;
+    background-position-y: 6px;
+    background-position-x: 5px;
+    margin: 0px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+    #caption h1 {
+        margin: 0;
+        padding: 0;
+        margin-left: 65px;
+        line-height: 55px;
+        margin-top: 5px;
+        float: left;
+        font-size: 16px;
+    }
+
+        #caption h1 small {
+            color: azure;
+        }
+
+    #caption div#userInfo {
+        line-height: 40px;
+        height: 40px;
+        width: 200px;
+        float: right;
+        margin-top: 20px;
+    }
+
+        #caption div#userInfo label, #caption div#userInfo a {
+            font-size: 12px;
+            color: antiquewhite;
+        }
+
+.edit-photo-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/images/user.ico");
+    display: inline-block;
+    height: 30px;
+    background-size: 24px;
+}
+
+#vtab > ul > li.selected {
+    border: 1px solid #ddd;
+    border-right: none;
+    z-index: 10;
+    background-color: darkblue;
+    color: white;
+    position: relative;
+}
+
+#vtab > ul {
+    float: left;
+    width: 25px;
+    text-align: left;
+    display: block;
+    margin: auto 0;
+    padding: 0;
+    position: relative;
+    top: 10px;
+    background-color: lightblue;
+}
+
+#vtab > div {
+    background-color: lightblue;
+    margin-left: 25px;
+    border: 1px solid #ddd;
+    min-height: 610px;
+    padding: 2px;
+    position: relative;
+    z-index: 9;
+    -moz-border-radius: 200px;
+}
+
+#vtab {
+    margin: 1px;
+    padding: 0px;
+}
+
+    #vtab > ul > li {
+        width: 25px;
+        height: 100px;
+        background-color: lightblue;
+        list-style-type: none;
+        display: block;
+        text-align: center;
+        vertical-align: middle;
+        margin: auto;
+        padding-bottom: 10px;
+        border: 1px solid #fff;
+        position: relative;
+        border-right: none;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+.refreshBtnContainer {
+    display: inline-block;
+}

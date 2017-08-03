@@ -1,0 +1,53 @@
+﻿
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#main-content {
+    position: absolute;
+    left: 120px;
+    top: 75px;
+    overflow: auto;
+}
+
+#viewDiv {
+    height: 100%;
+    width: 100%; 
+}
+
+#view3d_iframe {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#caption {
+    height: 75px;
+    background-color: darkblue;
+    background-image: url("/images/logo中交.png");
+    background-repeat: no-repeat;
+    background-size: 55px;
+    background-position-x: 5px;
+    background-position-y: 3px;
+    color: white;
+}
+
+    #caption h1 {
+        margin: 0;
+        padding: 0;
+        margin-left: 80px;
+        line-height: 55px;
+        margin-top: 5px;
+        float: left;
+        font-size: 24px;
+    }
+
+#nav-menu {
+    width: 120px;
+}
+
+#menu {
+    height: 100%;
+}

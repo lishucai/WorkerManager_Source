@@ -1,0 +1,3 @@
+﻿-v "https://developer.api.autodesk.com/oss/v2/buckets/bucketexamplekey/objects/jszh.nwc" -X DELETE -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Imp3dF9zeW1tZXRyaWNfa2V5In0.eyJjbGllbnRfaWQiOiJzV1NRNTlpQmcxRlFxTHZMUmNZd05FeXVDQm9tTDN4aiIsImV4cCI6MTUwMDAxMTI5NCwic2NvcGUiOlsiZGF0YTpyZWFkIiwiZGF0YTp3cml0ZSJdLCJhdWQiOiJodHRwczovL2F1dG9kZXNrLmNvbS9hdWQvand0ZXhwNjAiLCJqdGkiOiI2a3p3Z08ycWd1Z2tIVG1HcUpBV0J0ZWhXZnl4RG5QMjBCaXhDQlJsclZnSHZ4QzVpM1BmWExQWUJaNWNGZGIwIn0.yR9FnbcqJNyBxdML-q7q53rr5qiKxNnN7LrrS5lMKD0" -H "Content-Type: application/json;charset=UTF-8"
+
+-v "https://developer.api.autodesk.com/oss/v2/buckets/chinaiss_bucket/objects?limit=100" -X GET  -H "Authorization: Bearer ++++"  -H "Content-Type: application/json"

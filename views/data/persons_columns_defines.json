@@ -1,0 +1,346 @@
+﻿[
+  {
+    'field': "bianhao",
+    'title': "编号",
+    'width': 80,
+    'locked': true,
+    'attributes': {
+      'style': " font-size: 12px"
+    },
+    'headerAttributes': {
+      'style': "text-align: center;vertical-align:middle;"
+    }
+  },
+  {
+    'title': "基础信息",
+    'attributes': {
+      'style': " font-size: 12px"
+    },
+    'headerAttributes': {
+      'style': "text-align: center;vertical-align:middle;"
+    },
+    columns: [
+      {
+        'field': "group_id",
+        hidden: true,
+      },
+      {
+        'field': "name",
+        'title': "姓名",
+        'width': 100,
+        'locked': true,
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+      },
+      {
+        'field': "danwei",
+        'title': "单位",
+        'width': 200,
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+      },
+      {
+        'field': "bumen",
+        'title': "部门/标段",
+        'width': 150,
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+      },
+      {
+        'field': "zhiwei",
+        'title': "职位/工种",
+        'width': 150,
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+      },
+      {
+        'field': "lianxifangsi",
+        'title': "联系方式",
+        'width': 200,
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+      }
+    ]
+  },
+  {
+    'title': "高级信息",
+    'attributes': {
+      'style': " font-size: 12px"
+    },
+    'headerAttributes': {
+      'style': "text-align: center;vertical-align:middle;"
+    },
+    columns: [
+      {
+        'title': "个人信息",
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+        columns: [
+          {
+            'field': "shengfengzheng",
+            'title': "身份证号码",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "jiguan",
+            'title': "籍贯",
+            'width': 300,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "homeaddress",
+            'title': "家庭住址",
+            'width': 300,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "age",
+            'title': "年龄",
+            'width': 100,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "qslianxifanshi",
+            'title': "亲属联系方式",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          }
+        ]
+      },
+      {
+        'title': "技能水准",
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+        columns: [
+          {
+            'field': "wenhua",
+            'title': "文化程度",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "jiaoyu",
+            'title': "教育经历",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "jineng",
+            'title': "技能掌握",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "zhengshu",
+            'title': "证书情况",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "work",
+            'title': "工作经历",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "learn",
+            'title': "培训经历",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          }
+        ]
+      },
+      {
+        'title': "工作记录",
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+        columns: [
+          {
+            'field': "task",
+            'title': "进行任务",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "worktime",
+            'title': "工时记录",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "solary",
+            'title': "工资记录",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          }
+        ]
+      },
+      {
+        'title': "教育培训",
+        'attributes': {
+          'style': " font-size: 12px"
+        },
+        'headerAttributes': {
+          'style': "text-align: center;vertical-align:middle;"
+        },
+        columns: [
+          {
+            'field': "jiaodi",
+            'title': "交底记录",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          },
+          {
+            'field': "safe",
+            'title': "安全教育记录",
+            'width': 200,
+            'attributes': {
+              'style': " font-size: 12px"
+            },
+            'headerAttributes': {
+              'style': "text-align: center;vertical-align:middle;"
+            },
+          }
+        ]
+      }
+    ]
+  },
+  {
+    'title': "照片",
+    'field': "photo",
+    'width': 80,
+    command: [
+      {
+        name: "photo",
+        text: " ",
+        className: "my-commmand-button",
+        click: function
+        (e) {
+          e.preventDefault(); // prevent page scroll position change
+          var
+          tr =
+          $(e.target).closest("tr"); // get the current table row (tr)
+          var
+          data =
+          this.dataItem(tr); openWindowForUpload("uploadSingelPhoto",
+          "uploadSingelPhotoWin",
+          data.bianhao,
+          data.group_id,
+          true);
+        }
+      }
+    ],
+    'headerAttributes': {
+      'style': "text-align: center;vertical-align:middle;"
+    }
+  }
+
+]

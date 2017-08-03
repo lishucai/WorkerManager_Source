@@ -1,0 +1,102 @@
+﻿using System.Drawing;
+using System.Drawing.Drawing2D;
+
+public static class GraphicsPathHelper
+{
+    public static void DrawRoundRectangle(Graphics g, RoundRectangleArg arg)
+    {
+        if (g == null || arg.Rectangle.Width == 0 || arg.Rectangle.Height == 0)
+        {
+            return;
+        }
+
+        using (SmoothingModeGraphics smoothingMode = new SmoothingModeGraphics(g, SmoothingMode.AntiAlias))
+        {
+            using (var path = CreateRoundPath(arg.Rectangle, arg.ArcRadius))
+            {
+                if (arg.DrawBackground)
+                {
+                    using (var fillBrush = new LinearGradientBrush(
+                        arg.Rectangle, arg.StartColor, arg.EndColor, arg.LinearGradientMode))
+                    {
+                        var blend = new ColorBlend(2);
+                        blend.Positions[0] = 0.0f;
+                        blend.Positions[1] = 1.0f;
+                        blend.Colors[0] = arg.StartColor;
+                        blend.Colors[1] = arg.EndColor;
+                        fillBrush.InterpolationColors = blend;
+                        g.FillPath(fillBrush, path);
+                    }
+                }
+
+                if (arg.DrawBorder)
+                {
+                    using (var pen = new Pen(new SolidBrush(arg.BorderColor), arg.BorderWidth))
+                        g.DrawPath(pen, path);
+                }
+
+                if (arg.DrawInnerBorder)
+                {
+                    Rectangle rectangle = arg.Rectangle;
+                    rectangle.Inflate(-2, -2);
+                    var innerPath = CreateRoundPath(rectangle, arg.ArcRadius);
+
+                    using (var pen = new Pen(new SolidBrush(arg.InnerBorderColor), arg.InnerBorderWidth))
+                    {
+                        g.DrawPath(pen, innerPath);
+                    }
+                }
+            }
+        }
+    }
+
+    public static GraphicsPath CreateRoundPath(Rectangle rect, ArcRadius arcRadius)
+    {
+        var path = new GraphicsPath();
+
+        if (rect.Width == 0 || rect.Height == 0)
+        {
+            return path;
+        }
+
+        if (arcRadius.LeftTop > 0)
+        {
+            path.AddArc(
+                rect.Left, rect.Top, arcRadius.LeftTop, arcRadius.LeftTop, 180, 90);
+        }
+
+        path.AddLine(new Point(rect.Left + arcRadius.LeftTop, rect.Top),
+                     new Point(rect.Right - arcRadius.RightTop, rect.Top));
+
+        if (arcRadius.RightTop > 0)
+        {
+            path.AddArc(rect.Right - arcRadius.RightTop, rect.Top,
+                arcRadius.RightTop, arcRadius.RightTop, -90, 90);
+        }
+
+        path.AddLine(new Point(rect.Right, rect.Top + arcRadius.RightTop),
+                     new Point(rect.Right, rect.Bottom - arcRadius.RightBottom));
+
+        if (arcRadius.RightBottom > 0)
+        {
+            path.AddArc(rect.Right - arcRadius.RightBottom, rect.Bottom - arcRadius.RightBottom,
+                arcRadius.RightBottom, arcRadius.RightBottom, 0, 90);
+        }
+
+        path.AddLine(new Point(rect.Right - arcRadius.RightBottom, rect.Bottom),
+                     new Point(rect.Left + arcRadius.LeftBottom, rect.Bottom));
+
+        if (arcRadius.LeftBottom > 0)
+        {
+            path.AddArc(rect.Left, rect.Bottom - arcRadius.LeftBottom,
+                arcRadius.LeftBottom, arcRadius.LeftBottom, 90, 90);
+        }
+
+        path.AddLine(new Point(rect.Left, rect.Bottom - arcRadius.LeftBottom),
+                     new Point(rect.Left, rect.Top + arcRadius.LeftTop));
+
+        path.CloseFigure();
+
+        return path;
+    }
+}

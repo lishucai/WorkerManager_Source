@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .formLbl{
+            display:inline-block;
+            width:100px;
+            text-align:right;
+            margin-right:5px;
+        }
+
+        .container{
+            margin:auto;
+            width:500px;
+        }
+
+         .container p{
+             margin:auto;
+             width:250px;
+         }
+
+         #errorMessage{
+             color:red;
+         }
+    </style>
+    <script src="/jquery/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="UpdateUserHandler.ashx" method="post">
+            <label class="formLbl">用户名</label><input name="UserName" readonly /><br />
+            <label class="formLbl" for="LoginPassword">登录密码</label><input name="LoginPassword" /><br />
+            <label class="formLbl" for="ConfirmPassword">确认密码</label><input name="ConfirmPassword" /><br />
+            <label id="errorMessage"></label>
+            <p><button type="submit">保存</button>&nbsp;&nbsp;<button type="reset">重置</button></p>
+        </form>
+    </div>    
+</body>
+</html>

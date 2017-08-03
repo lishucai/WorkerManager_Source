@@ -1,0 +1,38 @@
+﻿[
+  {
+    "field": "group_id",
+    "hidden": true
+  },
+  {
+    "field": "bianhao",
+    "title": "序号"
+  },
+  {
+    "field": "jizhong",
+    "title": "机种"
+  },
+  {
+    "field": "no",
+    "title": "编号"
+  },
+  {
+    "field": "bumeng",
+    "title": "部门/班组"
+  },
+  {
+    "field": "zherenren",
+    "title": "责任人"
+  },
+  {
+    "field": "caozuoren",
+    "title": "操作人"
+  },
+  {
+    "field": "zuoye",
+    "title": "作业情况"
+  },
+  {
+    "field": "jianxiu",
+    "title": "检修信息"
+  }
+]
