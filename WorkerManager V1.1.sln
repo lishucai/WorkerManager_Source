@@ -24,6 +24,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WorkerManager V1.1", "E:\wo
 		SlnRelativePath = "..\WorkerManager V1.1\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Demo3DViewer", "..\Demo3DViewer\", "{BD52BE96-7811-4BF0-9051-A4611F3A00B8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65406"
+		Debug.AspNetCompiler.PhysicalPath = "..\Demo3DViewer\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65406\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65406"
+		Release.AspNetCompiler.PhysicalPath = "..\Demo3DViewer\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65406\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "65406"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +52,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6729C26C-635E-47BB-9B52-688A61737C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6729C26C-635E-47BB-9B52-688A61737C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD52BE96-7811-4BF0-9051-A4611F3A00B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD52BE96-7811-4BF0-9051-A4611F3A00B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
