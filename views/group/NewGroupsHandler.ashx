@@ -2,7 +2,7 @@
 
 using System;
 using System.Web;
-
+    using LiuShengFeng.Core;
 public class NewGroupsHandler : IHttpHandler, System.Web.SessionState.IRequiresSessionState
 {
 

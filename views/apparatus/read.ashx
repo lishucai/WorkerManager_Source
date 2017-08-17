@@ -2,18 +2,19 @@
 
 using System;
 using System.Web;
+using LiuShengFeng.Core;
+public class read : IHttpHandler, System.Web.SessionState.IRequiresSessionState
+{
 
-public class read : IHttpHandler,System.Web.SessionState.IRequiresSessionState
-{ 
-    
-    public void ProcessRequest (HttpContext context) {
-         context.Response.ContentType = "text/plain";
+    public void ProcessRequest(HttpContext context)
+    {
+        context.Response.ContentType = "text/plain";
         SQLHelper sqlHeler = CommWebUtil.GetSQLHelper(context);
         try
         {
-            SystemUserInfo loginUser =context.Session[Resources.LOGIN_USER_INFO] as SystemUserInfo;
-            string groupId =  context.Request.Params["groupid"] ?? string.Empty;
-           string whereClause = " where 1=1   ";
+            SystemUserInfo loginUser = context.Session[Resources.LOGIN_USER_INFO] as SystemUserInfo;
+            string groupId = context.Request.Params["groupid"] ?? string.Empty;
+            string whereClause = " where 1=1   ";
             if (!string.IsNullOrEmpty(groupId))
                 whereClause += " and group_id = '" + groupId + "'";
 
@@ -31,9 +32,11 @@ public class read : IHttpHandler,System.Web.SessionState.IRequiresSessionState
             throw;
         }
     }
- 
-    public bool IsReusable {
-        get {
+
+    public bool IsReusable
+    {
+        get
+        {
             return false;
         }
     }

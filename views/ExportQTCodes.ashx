@@ -3,6 +3,7 @@
 using System;
 using System.Web;
 using System.Data;
+    using LiuShengFeng.Core;
 public class ExportQTCodesHandler : IHttpHandler, System.Web.SessionState.IRequiresSessionState
 {
     public void ProcessRequest(HttpContext context)

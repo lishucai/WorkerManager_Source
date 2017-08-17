@@ -5,6 +5,7 @@ using System.Web;
 using System.Collections.Generic;
 using System.Data;
 using System.Web.SessionState;
+using LiuShengFeng.Core;
 public class LoginCheckHandler : IHttpHandler, IRequiresSessionState
 {
 
@@ -15,7 +16,7 @@ public class LoginCheckHandler : IHttpHandler, IRequiresSessionState
 
         if ("bimoun#666".Equals(loginPassword) && "bimoun".Equals(loginUserName))//临时用户
         {
-            context.Session.Add(Resources.LOGIN_USER_INFO, new SystemUserInfo() { Name="bimoun"});
+            context.Session.Add(Resources.LOGIN_USER_INFO, new SystemUserInfo() { Name = "bimoun" });
             context.Response.Redirect("/views/lrms/home.aspx");
         }
 

@@ -2,11 +2,13 @@
 
 using System;
 using System.Web;
+using LiuShengFeng.Core;
+public class read : IHttpHandler
+{
 
-public class read : IHttpHandler {
-    
-    public void ProcessRequest (HttpContext context) {
-       context.Response.ContentType = "text/plain";
+    public void ProcessRequest(HttpContext context)
+    {
+        context.Response.ContentType = "text/plain";
         SQLHelper sqlHeler = CommWebUtil.GetSQLHelper(context);
         try
         {
@@ -23,9 +25,11 @@ public class read : IHttpHandler {
             throw;
         }
     }
- 
-    public bool IsReusable {
-        get {
+
+    public bool IsReusable
+    {
+        get
+        {
             return false;
         }
     }

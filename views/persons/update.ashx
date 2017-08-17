@@ -2,6 +2,7 @@
 
 using System;
 using System.Web;
+using LiuShengFeng.Core;
 
 public class update : IHttpHandler
 {
@@ -18,7 +19,7 @@ public class update : IHttpHandler
                 System.Collections.Generic.List<string> conditions = new System.Collections.Generic.List<string>();
                 conditions.Add("bianhao");
                 conditions.Add("group_id");
-                
+
                 if (sqlHelper.Update(dt, conditions) > 0)
                 {
                     isSuccess = true;

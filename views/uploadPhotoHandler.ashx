@@ -5,6 +5,7 @@ using System.Web;
 using System.Collections.Generic;
 using System.IO.Compression;
 using System.Web.SessionState;
+using LiuShengFeng.Core;
 
 public class uploadPhotoHandler : IHttpHandler, IRequiresSessionState
 {
@@ -38,13 +39,13 @@ public class uploadPhotoHandler : IHttpHandler, IRequiresSessionState
                 SQLHelper sqlHeler = CommWebUtil.GetSQLHelper(context);
                 if (bianhao == "-1")
                 {
-                    handleWinZiprFileUpload(context.Request.Files,groupId, UploadFilesPath, sqlHeler);
+                    handleWinZiprFileUpload(context.Request.Files, groupId, UploadFilesPath, sqlHeler);
                     context.Response.Write(string.Empty);
                 }
                 else
                 {
 
-                    handleSingleFileUpload(f, UploadFilesPath,groupId, bianhao, sqlHeler);
+                    handleSingleFileUpload(f, UploadFilesPath, groupId, bianhao, sqlHeler);
                     Newtonsoft.Json.Linq.JObject jo = new Newtonsoft.Json.Linq.JObject();
                     jo["bianhao"] = bianhao;
                     jo["groupid"] = groupId;
@@ -61,7 +62,7 @@ public class uploadPhotoHandler : IHttpHandler, IRequiresSessionState
         }
     }
 
-    private void handleWinZiprFileUpload(HttpFileCollection files,string  groupId, string fileSaveDir, SQLHelper sqlHelper)
+    private void handleWinZiprFileUpload(HttpFileCollection files, string groupId, string fileSaveDir, SQLHelper sqlHelper)
     {
         if (files != null || files.Count > 0)
         {
@@ -75,7 +76,7 @@ public class uploadPhotoHandler : IHttpHandler, IRequiresSessionState
                 string entryExtensionName = fileName.Substring(fileName.LastIndexOf('.'));
                 string name = fileName.Substring(0, fileName.LastIndexOf(entryExtensionName));
 
-                SavePhoto(name,groupId, fullPath, sqlHelper);
+                SavePhoto(name, groupId, fullPath, sqlHelper);
             }
         }
     }
@@ -86,11 +87,11 @@ public class uploadPhotoHandler : IHttpHandler, IRequiresSessionState
         string photoFilePath = System.IO.Path.Combine(fileSaveDir, bianhao + extensionName);
         f.SaveAs(photoFilePath);
 
-        SavePhoto(bianhao,groupId, photoFilePath, sqlHelper);
+        SavePhoto(bianhao, groupId, photoFilePath, sqlHelper);
     }
 
 
-    private int SavePhoto(string bianhaoOrname,string groupId, string filefullName, SQLHelper sqlHelper)
+    private int SavePhoto(string bianhaoOrname, string groupId, string filefullName, SQLHelper sqlHelper)
     {
         string sql = "update persons set photo=@photo where ( bianhao=@bianhao or name=@name ) and  group_id=@groupId";
         Dictionary<string, object> parameters = new Dictionary<string, object>();

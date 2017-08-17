@@ -4,7 +4,7 @@ using System;
 using System.Web;
 using System.Collections.Generic;
 using System.Data;
-
+    using LiuShengFeng.Core;
 public class UploadPersonsExcelHandler : IHttpHandler, System.Web.SessionState.IRequiresSessionState
 {
 

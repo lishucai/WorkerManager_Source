@@ -2,6 +2,7 @@
 
 using System;
 using System.Web;
+    using LiuShengFeng.Core;
 
 public class create : IHttpHandler
 {

@@ -2,6 +2,7 @@
 
 using System;
 using System.Web;
+using LiuShengFeng.Core;
 
 /// <summary>
 /// 处理上传3D模型到服务器的请求

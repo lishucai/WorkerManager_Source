@@ -3,6 +3,7 @@
 using System;
 using System.Web;
 using System.Web.SessionState;
+    using LiuShengFeng.Core;
 public class LoadGroupsHandler : IHttpHandler, IRequiresSessionState
 {
 

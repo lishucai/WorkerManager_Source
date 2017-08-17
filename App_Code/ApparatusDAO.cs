@@ -1,7 +1,6 @@
-﻿using System;
+﻿using LiuShengFeng.Core;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 /// <summary>
 /// ApparatusDAO 的摘要说明

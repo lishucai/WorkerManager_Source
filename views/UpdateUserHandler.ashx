@@ -2,7 +2,7 @@
 
 using System;
 using System.Web;
-
+    using LiuShengFeng.Core;
 public class UpdateUserHandler : IHttpHandler, System.Web.SessionState.IRequiresSessionState
 {
 
